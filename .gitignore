@@ -1,0 +1,8 @@
+GoogleDriveSetup.exe
+*.exe
+*.msi
+node_modules/
+.wrangler/
+.env
+.env.*
+!.env.example

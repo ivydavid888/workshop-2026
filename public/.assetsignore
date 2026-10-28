@@ -1,0 +1,6 @@
+# Publish only the reviewed website files, even if installers are copied here.
+*
+!index.html
+!workshop-handout.pdf
+!workshop-qrcode.png
+!workshop-qrcode.svg
