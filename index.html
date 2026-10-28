@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雄市 115 年度教保研習｜基本救命術訓練暨緊急救護情境演習</title>
+    <meta name="description" content="高雄市 115 年度教保研習：基本救命術訓練暨緊急救護情境演習（五點量表滿意度調查表與講義下載專區），高雄市鹽埕區忠孝國民小學附設幼兒園主辦。">
+    <style>
+        :root {
+            --primary: #dc2626;
+            --primary-dark: #b91c1c;
+            --primary-light: #fef2f2;
+            --accent: #0284c7;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-body: #f8fafc;
+            --card-bg: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", "PingFang TC", sans-serif; }
+        body { background-color: var(--bg-body); color: var(--text-main); line-height: 1.6; }
+
+        /* 頂部橫幅 */
+        .hero {
+            background: linear-gradient(135deg, #991b1b 0%, #dc2626 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1.5rem;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.35rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            backdrop-filter: blur(4px);
+        }
+        .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 0.5rem; letter-spacing: 0.5px; }
+        .hero h2 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 500; opacity: 0.95; }
+
+        .container { max-width: 960px; margin: 0 auto; padding: 2rem 1.25rem; }
+
+        /* 歡迎詞卡片 */
+        .welcome-box {
+            background: var(--card-bg);
+            border-left: 5px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+        .welcome-box strong { color: var(--text-main); }
+
+        /* 雙欄核心互動區（QR Code + 直連按鈕） */
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main); }
+        
+        .qr-wrapper {
+            background: white;
+            padding: 1rem;
+            border: 3px solid var(--primary-light);
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            cursor: zoom-in;
+            transition: transform 0.2s;
+        }
+        .qr-wrapper:hover { transform: scale(1.03); }
+        .qr-wrapper img { width: 220px; height: 220px; object-fit: contain; display: block; }
+        .qr-hint { font-size: 0.9rem; color: var(--text-muted); }
+
+        .btn-primary {
+            display: inline-block;
+            width: 100%;
+            max-width: 320px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 1.1rem 1.5rem;
+            border-radius: 0.75rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+            transition: background 0.2s, transform 0.1s;
+            margin-bottom: 1rem;
+        }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+        .btn-secondary {
+            display: inline-block;
+            width: 100%;
+            max-width: 320px;
+            background: #f0f9ff;
+            color: var(--accent);
+            border: 2px solid #bae6fd;
+            text-decoration: none;
+            padding: 0.85rem 1.5rem;
+            border-radius: 0.75rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+        .btn-secondary:hover { background: #e0f2fe; }
+
+        /* 五點量表標準 */
+        .scale-section {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+        .scale-title { text-align: center; font-size: 1.2rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--primary-dark); }
+        .scale-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.75rem;
+        }
+        .scale-item {
+            padding: 0.85rem;
+            border-radius: 0.6rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .s-5 { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .s-4 { background: #e0f2fe; color: #075985; border: 1px solid #bae6fd; }
+        .s-3 { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+        .s-2 { background: #ffedd5; color: #9a3412; border: 1px solid #fed7aa; }
+        .s-1 { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+
+        /* 三步驟流程 */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .step-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 0.85rem;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+        .step-num {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 800;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.6rem;
+        }
+        .step-card h4 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+        .step-card p { font-size: 0.95rem; color: var(--text-muted); }
+
+        /* 放大檢視 Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 1rem;
+            cursor: zoom-out;
+        }
+        .modal img { width: min(85vw, 480px); height: min(85vw, 480px); background: white; padding: 1.5rem; border-radius: 1.25rem; }
+        .modal p { color: white; margin-top: 1rem; font-size: 1.1rem; font-weight: bold; }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #1e293b;
+            color: #cbd5e1;
+            margin-top: 2rem;
+        }
+        footer strong { color: white; font-size: 1.05rem; }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="badge">高雄市 115 年度教保研習｜課後五點量表回饋專用</div>
+        <h1>基本救命術訓練暨緊急救護情境演習</h1>
+        <h2>《1018教保研習_五點量表正式版》線上滿意度調查表</h2>
+    </header>
+
+    <main class="container">
+        <!-- 歡迎詞 -->
+        <div class="welcome-box">
+            <strong>親愛的幼教夥伴您好：</strong><br>
+            感謝您撥冗參與本次「基本救命術訓練暨緊急救護情境演習」研習活動！為了解活動辦理情形及您的參與感受，作為未來規劃與精進之參考，敬請使用<strong>手機內建相機</strong>、<strong>LINE 掃碼器</strong>掃描下方 QR Code，或直接點擊按鈕開啟 Google 表單作答。謝謝您的支持與配合！
+        </div>
+
+        <!-- 掃碼與按鈕雙軌區 -->
+        <section class="action-grid">
+            <div class="card">
+                <div class="card-title">📱 手機相機／LINE 掃碼作答</div>
+                <div class="qr-wrapper" onclick="openModal()" title="點擊放大 QR Code">
+                    <img id="qr-img" src="workshop-qrcode.png" alt="問卷 QR Code">
+                </div>
+                <p class="qr-hint">🔍 點擊上方 QR Code 可放大至全螢幕</p>
+                <p style="font-size: 0.8rem; color: #64748b; margin-top: 0.35rem;">https://forms.gle/DNUr9uyD9woBuZkB8</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">⚡ 手機瀏覽直接點擊</div>
+                <p style="color: var(--text-muted); margin-bottom: 1.25rem; font-size: 0.95rem;">
+                    若您正使用手機開啟本網頁，免掃碼！請直接點擊下方按鈕進入表單填寫，或下載今日研習講義：
+                </p>
+                <a id="form-btn" href="https://forms.gle/DNUr9uyD9woBuZkB8" target="_blank" rel="noopener" class="btn-primary">
+                    ✍️ 點此直接填寫五點量表問卷
+                </a>
+                <a href="workshop-handout.pdf" target="_blank" rel="noopener" class="btn-secondary">
+                    📄 下載本次研習講義 (PDF)
+                </a>
+                <p style="font-size: 0.85rem; color: #16a34a; margin-top: 1rem; font-weight: 600;">
+                    ✅ 免登入直接作答，提交即完成回饋簽退
+                </p>
+            </div>
+        </section>
+
+        <!-- 五點量表評分標準 -->
+        <section class="scale-section">
+            <div class="scale-title">【 五點量表評分標準 】</div>
+            <div class="scale-grid">
+                <div class="scale-item s-5">5分：非常滿意（A）</div>
+                <div class="scale-item s-4">4分：滿意（B）</div>
+                <div class="scale-item s-3">3分：普通／尚可（C）</div>
+                <div class="scale-item s-2">2分：不滿意（D）</div>
+                <div class="scale-item s-1">1分：非常不滿意（D）</div>
+            </div>
+        </section>
+
+        <!-- 填答三步驟 -->
+        <section class="steps-grid">
+            <div class="step-card">
+                <span class="step-num">步驟 1</span>
+                <h4>手機掃碼或點擊按鈕</h4>
+                <p>開啟手機內建相機或 LINE 掃碼器對準上方 QR Code，或直接點擊紅色填答按鈕。</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">步驟 2</span>
+                <h4>五點量表評分</h4>
+                <p>點選第 1～7 題五點量表（5分～1分），並歡迎於第 8 題留下您的寶貴開放建議。</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">步驟 3</span>
+                <h4>自動統計與簽退</h4>
+                <p>按下「提交」即自動匯入統計資料庫，並完成本次研習之線上回饋簽退。</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- QR Code 全螢幕放大視窗 -->
+    <div id="qr-modal" class="modal" onclick="closeModal()">
+        <img id="modal-img" src="workshop-qrcode.png" alt="放大版 QR Code">
+        <p>點擊畫面任意處即可關閉</p>
+    </div>
+
+    <footer>
+        <p><strong>再次感謝您的熱忱參與與寶貴回饋！</strong></p>
+        <p style="margin-top: 0.3rem;">高雄市鹽埕區忠孝國民小學附設幼兒園 敬上</p>
+    </footer>
+
+    <script>
+        // 已綁定您的研習滿意度調查表專屬短網址
+        const FORM_URL = "https://forms.gle/DNUr9uyD9woBuZkB8";
+
+        const formBtn = document.getElementById('form-btn');
+        const qrImg = document.getElementById('qr-img');
+        const modalImg = document.getElementById('modal-img');
+
+        formBtn.href = FORM_URL;
+
+        // 若 GitHub 上找不到 workshop-qrcode.png，自動使用 FORM_URL 即時產生高清 QR Code，確保不破圖
+        qrImg.onerror = function() {
+            const fallbackQR = "https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=10&data=" + encodeURIComponent(FORM_URL);
+            qrImg.src = fallbackQR;
+            modalImg.src = fallbackQR;
+        };
+
+        function openModal() {
+            modalImg.src = qrImg.src;
+            document.getElementById('qr-modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('qr-modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
